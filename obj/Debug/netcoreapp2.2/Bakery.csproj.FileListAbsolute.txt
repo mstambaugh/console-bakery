@@ -1,0 +1,4 @@
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.csprojAssemblyReference.cache
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.csproj.CoreCompileInputs.cache
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfoInputs.cache
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfo.cs
