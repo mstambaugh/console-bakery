@@ -1,6 +1,7 @@
 namespace Bakery
 {
-  class Bread {
+  class Bread 
+  {
     // auto-implemented properties 
     public int Quantity { get; set; }
     public int TotalPrice { get; set; } 
@@ -21,13 +22,14 @@ namespace Bakery
       // return quantity * price. if quantity % 2 == 0, then total price == .
     }
   }
-  class Pastry {
+  class Pastry 
+  {
+    public int Quantity { get; set; }
+    public int TotalPrice { get; set; }
     public Pastry(int quantity, int totalprice)
     {
       Quantity = quantity;
       TotalPrice = totalprice;
     }
   }
-
-
 }
