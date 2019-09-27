@@ -8,29 +8,21 @@ namespace Bakery
     public int BreadPrice { get; set; } 
 
     // bread constructor
-    public Bread(int breadquantity, int breadprice) 
+    public Bread() 
     {
-      BreadQuantity = breadquantity;
-      BreadPrice = breadprice;
+      
     }
     // bread methods
-    public int GetBreadQuantity()
-    {
-      return BreadQuantity;
-    }
+    
     public int GetBreadPrice()
     {
-      int FreeLoaves = 0;
-      // if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
-      if (BreadQuantity > 1)
+      // buy 2, get 1 free, 5 dollars each 
+      // 13/3 = 4*10 = 40, % 1 * 5 = 45
+      // old math (if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
+      BreadPrice = ((BreadQuantity / 3) * 10) + ((BreadQuantity % 3) * 5);
+      if (BreadQuantity % 3 == 2)
       {
-        FreeLoaves = BreadQuantity/3;
-        BreadPrice = (BreadQuantity * 5) - (FreeLoaves * 5);
-        BreadQuantity += FreeLoaves; 
-      }
-      else
-      {
-        BreadPrice = BreadQuantity * 5;
+        BreadQuantity += 1;
       }
       return BreadPrice;
     }
@@ -38,22 +30,17 @@ namespace Bakery
 
   class Pastries 
   {
-    public string Pastry { get; set; }
     public int PastryQuantity { get; set; }
     public int PastryPrice { get; set; }
-    public Pastries(int pastryquantity, int pastryprice)
+    public Pastries()
     {
-      PastryQuantity = pastryquantity;
-      PastryPrice = pastryprice;
+      
     }
-    public int GetPastryQuantity()
-    {
-      return PastryQuantity;
-    }
+    
     public int GetPastryPrice()
     {
-      // Buy 1 for \$2 or 3 for $5.
-      // 13/3 = 4 * 5 = 20, 
+      // Buy 1 for $2 or 3 for $5.
+      // 13/3 = 4 * 5 = 20 + 2 = $22, 
       int CheapPastries = PastryQuantity / 3;
       int ExpensivePastries = PastryQuantity % 3;
       PastryPrice = (CheapPastries * 5) + (ExpensivePastries * 2);
