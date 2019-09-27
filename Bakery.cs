@@ -10,7 +10,6 @@ namespace Bakery
     // bread constructor
     public Bread(int breadquantity, int breadprice) 
     {
-      // Loaf = loaf;
       BreadQuantity = breadquantity;
       BreadPrice = breadprice;
     }
@@ -21,7 +20,7 @@ namespace Bakery
     }
     public int GetBreadPrice()
     {
-      int Freeloaves = 0;
+      int FreeLoaves = 0;
       // if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
       if (BreadQuantity > 1)
       {
@@ -42,9 +41,8 @@ namespace Bakery
     public string Pastry { get; set; }
     public int PastryQuantity { get; set; }
     public int PastryPrice { get; set; }
-    public Pastries(string pastry, int PastryQuantity, int PastryPrice)
+    public Pastries(int pastryquantity, int pastryprice)
     {
-      Pastry = pastry;
       PastryQuantity = pastryquantity;
       PastryPrice = pastryprice;
     }
@@ -54,11 +52,10 @@ namespace Bakery
     }
     public int GetPastryPrice()
     {
-      int CheapPastries = 0;
       // Buy 1 for \$2 or 3 for $5.
       // 13/3 = 4 * 5 = 20, 
-      CheapPastries = PastryQuantity / 3;
-      ExpensivePastries = PastryQuantity % 3;
+      int CheapPastries = PastryQuantity / 3;
+      int ExpensivePastries = PastryQuantity % 3;
       PastryPrice = (CheapPastries * 5) + (ExpensivePastries * 2);
       return PastryPrice;
     }
