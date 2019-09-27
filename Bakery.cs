@@ -15,24 +15,36 @@ namespace Bakery
       TotalPrice = totalprice;
     }
     // bread methods
-    public int GetQuantity() 
+    public int GetQuantity()
     {
-      // return quantity 
+      return Quantity;
     }
     public int GetTotalPrice()
     {
-      // return quantity * price. if quantity % 2 == 0, then total price == .
+      int Freeloaves = 0;
+      if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
+      {
+        FreeLoaves = Quantity/3;
+        TotalPrice = (Quantity * 5) - (FreeLoaves * 5);
+        Quantity += FreeLoaves; 
+      }
+      else
+      {
+        TotalPrice = Quantity * 5;
+      }
+      return TotalPrice;
     }
-  }
+  }   
+}
   class Pastries 
   {
     public string Pastry { get; set; }
-    public int Quantity { get; set; }
+    public int Quantity2 { get; set; }
     public int TotalPrice { get; set; }
-    public Pastries(string pastry, int quantity, int totalprice)
+    public Pastries(string pastry, int quantity2, int totalprice)
     {
       Pastry = pastry;
-      Quantity = quantity;
+      Quantity2 = quantity2;
       TotalPrice = totalprice;
     }
   }

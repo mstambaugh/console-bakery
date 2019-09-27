@@ -2,3 +2,10 @@
 /Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.csproj.CoreCompileInputs.cache
 /Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfoInputs.cache
 /Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfo.cs
+/Users/Molly/Desktop/console-bakery/bin/Debug/netcoreapp2.2/Bakery.deps.json
+/Users/Molly/Desktop/console-bakery/bin/Debug/netcoreapp2.2/Bakery.runtimeconfig.json
+/Users/Molly/Desktop/console-bakery/bin/Debug/netcoreapp2.2/Bakery.runtimeconfig.dev.json
+/Users/Molly/Desktop/console-bakery/bin/Debug/netcoreapp2.2/Bakery.dll
+/Users/Molly/Desktop/console-bakery/bin/Debug/netcoreapp2.2/Bakery.pdb
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.dll
+/Users/Molly/Desktop/console-bakery/obj/Debug/netcoreapp2.2/Bakery.pdb
