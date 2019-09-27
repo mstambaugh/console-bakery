@@ -4,35 +4,36 @@ namespace Bakery
   {
     // auto-implemented properties 
     // public string Loaf { get; set; }
-    public int Quantity { get; set; }
-    public int TotalPrice { get; set; } 
+    public int BreadQuantity { get; set; }
+    public int BreadPrice { get; set; } 
 
     // bread constructor
-    public Bread(int quantity, int totalprice) 
+    public Bread(int breadquantity, int breadprice) 
     {
       // Loaf = loaf;
-      Quantity = quantity;
-      TotalPrice = totalprice;
+      BreadQuantity = breadquantity;
+      BreadPrice = breadprice;
     }
     // bread methods
-    public int GetQuantity()
+    public int GetBreadQuantity()
     {
-      return Quantity;
+      return BreadQuantity;
     }
-    public int GetTotalPrice()
+    public int GetBreadPrice()
     {
       int Freeloaves = 0;
-      if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
+      // if (Quantity > 2 || Quantity % 3 == 0 || (Quantity % 3) > 1)
+      if (BreadQuantity > 1)
       {
-        FreeLoaves = Quantity/3;
-        TotalPrice = (Quantity * 5) - (FreeLoaves * 5);
-        Quantity += FreeLoaves; 
+        FreeLoaves = BreadQuantity/3;
+        BreadPrice = (BreadQuantity * 5) - (FreeLoaves * 5);
+        BreadQuantity += FreeLoaves; 
       }
       else
       {
-        TotalPrice = Quantity * 5;
+        BreadPrice = BreadQuantity * 5;
       }
-      return TotalPrice;
+      return BreadPrice;
     }
   }   
 
@@ -51,26 +52,15 @@ namespace Bakery
     {
       return PastryQuantity;
     }
-    public int GetPastryTotalPrice()
+    public int GetPastryPrice()
     {
       int CheapPastries = 0;
       // Buy 1 for \$2 or 3 for $5.
-      if (PastryQuantity % 3 == 0)
-      {
-        PastryPrice = (PastryQuantity / 3 ) * 5;
-      }
-      if (PastryQuantity > 3)
-      {
-        // 13/3 = 4 * 5 = 20, 
-        CheapPastries = PastryQuantity / 3;
-        ExpensivePastries = PastryQuantity % 3;
-        PastryPrice = (CheapPastries * 5) + (ExpensivePastries *2);
-      }
-      else
-      {
-        PastryPrice = Quantity * 2;
-      }
-      return TotalPrice;
+      // 13/3 = 4 * 5 = 20, 
+      CheapPastries = PastryQuantity / 3;
+      ExpensivePastries = PastryQuantity % 3;
+      PastryPrice = (CheapPastries * 5) + (ExpensivePastries * 2);
+      return PastryPrice;
     }
   }
 }

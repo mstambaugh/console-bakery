@@ -32,13 +32,13 @@ namespace Order
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.WriteLine("How many loaves would you like?");
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        int Quantity = int.Parse(Console.ReadLine());
+        int BreadQuantity = int.Parse(Console.ReadLine());
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         Console.WriteLine("How many pastries would you like?");
         Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        int Quantity2 = int.Parse(Console.ReadLine());
+        int PastryQuantity = int.Parse(Console.ReadLine());
         Console.WriteLine("Your total will be € " + TotalPrice);
-        Console.WriteLine("You ordered " + Quantity + " Levain Batard and " + Quantity2 + " Pain Au Chocolat");
+        Console.WriteLine("You ordered " + BreadQuantity + " Levain Batard and " + PastryQuantity + " Pain Au Chocolat");
         Console.WriteLine("<(✜)>~~<(o)><()>~~<()>~~<()>~~<()>~~<()>~~<()>~~<()>~~<()><(o)>~~<(✜)>");
       }
       else
